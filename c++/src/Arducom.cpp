@@ -7,7 +7,6 @@ using namespace std;
 
 Arducom::Arducom(string port){
   this->port = port;
-
 }
 
 string Arducom::getPort(){
@@ -30,6 +29,17 @@ void Arducom::resetPort(string port,int verbose= false){
 void Arducom::send(string message){
   ofstream sFile;
   sFile.open(this->port);
-  sFile << message;
+  if(sFile.is_open()){
+
+    sFile << message;
+  }else{
+    cout << "Error:Cannot Open The Serial Port!";
+  }
   sFile.close();
+}
+
+void Arducom::read(){
+  ifstream sFile;
+  sFile.open(this->port);
+
 }
