@@ -1,3 +1,12 @@
+/*
+
+Wrriten By Swornim Shrestha
+Monday September 12, 2016
+2:54 PM Nepal
+Email:srestaswrnm@gmail.com
+
+
+*/
 #ifndef H_ARDUCOM_H
 
 #define H_ARDUCOM_H

@@ -1,3 +1,12 @@
+/*
+
+Wrriten By Swornim Shrestha
+Monday September 12, 2016
+2:54 PM Nepal
+Email:srestaswrnm@gmail.com
+
+
+*/
 #include"Arducom.h" //Arducom Header File
 #include<iostream> //iostream
 #include<string> //String Header
