@@ -1,5 +1,7 @@
 #Arducom
-Arducom is Arduino Serial Communication Libraries written in different languages. Currently in python and C++.
+Arducom is Arduino Serial Communication Libraries written in different languages. Currently have libraries written in,
+1. PHP,
+2. C++.
 
 ##Arducom C++ Library
 Written in C++.
