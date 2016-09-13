@@ -12,6 +12,8 @@ Email:srestaswrnm@gmail.com
 #define H_ARDUCOM_H
 #include<string>
 
+namespace ac{
+
 class Arducom{
 private:
   std::string port;
@@ -36,5 +38,6 @@ public:
   std::string getBuffer();
 
 };
+}
 
 #endif

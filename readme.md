@@ -5,6 +5,7 @@ Arducom is Arduino Serial Communication Libraries written in different languages
 
 ##Arducom C++ Library
 Written in C++.
+Using namespace ac
 
 ##Arducom PHP Library
 Written in PHP.

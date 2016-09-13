@@ -13,7 +13,7 @@ Email:srestaswrnm@gmail.com
 #include<fstream> //File Header
 
 using namespace std;
-
+using namespace ac;
 /*
 
   Constructor
