@@ -1,0 +1,183 @@
+<!--
+Wrriten By Swornim Shrestha
+September 12, 2016 Monday 3:54PM Nepal
+Written For My Github Page
+Email:srestaswrnm@gmail.com
+-->
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Arducom - Arduino Serial Communication Library</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="app.js"></script>
+  <script src="arducom.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <!--Page Header Starts-->
+    <div class="page-header">
+      <a href="index.html" class="btn btn-success pull-right">Return To Home</a>
+      <a onclick="getCpp()" class="label label-info pull-left" style="margin-right:2px">C++ Library</a>
+      <a onclick="getPHP()" class="label label-success pull-left">PHP Library</a><br>
+      <h3>Arducom - Arduino Serial Communication Library</h3>
+    </div>
+    <!--Page Header Ends-->
+
+    <!--Nav Bar Starts-->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="#">
+            <span class="navbar-brand">
+              Arducom - Serial Communication Library
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!--Nav Bar Ends-->
+    <div class="page-container">
+      <div id="cpp_arducom">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3>How To Use?</h3>
+          </div>
+          <div class="panel-body">
+            At First Download the files and copy the C++ library to your working directory.Here Arducom is the name of class and Ser is name of Object. COM4 is the name of Serial Port. Incase of linux We Use dev/ttyACM0 or something similar. First see in which serial port arduino is communicating with your computer.
+            </br></br>
+            <p style="color:#999">Code:</p>
+            #include"src/Arducom.h"</br>
+            using namspace ac;<br>
+            Arducom Ser("/dev/ttyACM0");<br>
+            <div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3>getPort()</h3>
+          </div>
+          <div class="panel-body">
+            This function simply returns you some string. The string will be the port your are Currently using.This will print Current Port you are working with.
+            </br></br>
+            <p style="color:#999">Code:</p>
+            std::string CurrentPort = Ser.getPort();<br>
+            cout << CurrentPort << endl;<br>
+          </div>
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3>printPort()</h3>
+          </div>
+          <div class="panel-body">
+            This fuction will print the port you are working with on the screen.
+            </br></br>
+            <p style="color:#999">Code:</p>
+            Ser.printPort();<br>
+          </div>
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3>resetPort()</h3>
+          </div>
+          <div class="panel-body">
+            This funciton resetPort is used to reset the port to another name. It takes two arguments. Where first argument is name of port and the second one in integer. 0 or 1. 1 denotes the verbose on and 0 for verbose off. Simply 0 will not print anything and 1 will print Some informations.
+            </br></br>
+            <p style="color:#999">Code:</p>
+            Ser.resetPort("/dev/ttyACM0",0);<br> or Ser.resetPort("/dev/ttyACM0",1);<br>
+          </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3>sendBuffer()</h3>
+          </div>
+          <div class="panel-body">
+            This function is used to send information over seial port. It takes one parameter. You can send both integer and string variable to this function. It returns 0 or 1 with success or failure of sending the information.
+            </br></br>
+            <p style="color:#999">Code:</p>
+            Ser.sendBuffer("Hello World");<br> Ser.sendBuffer(1);<br>
+          </div>
+        </div>
+      </div>
+
+      <div id="php_arducom">
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3>How To Use?</h3>
+          </div>
+          <div class="panel-body">
+            At First Download the files and copy the PHP library to your working directory.Here Arducom is the name of class and Ser is name of Object. COM4 is the name of Serial Port. Incase of linux We Use dev/ttyACM0 or something similar. First see in which serial port arduino is communicating with your computer.
+            </br></br>
+            <p style="color:#999">Code:</p>
+              require(Arducom.php);<br>
+              Ser = new Arducom
+            <div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3>getPort()</h3>
+          </div>
+          <div class="panel-body">
+            This function simply returns you some string. The string will be the port your are Currently using.This will print Current Port you are working with.
+            </br></br>
+            <p style="color:#999">Code:</p>
+             $CurrentPort = Ser->getPort();<br>
+          </div>
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3>printPort()</h3>
+          </div>
+          <div class="panel-body">
+            This fuction will print the port you are working with on the screen.
+            </br></br>
+            <p style="color:#999">Code:</p>
+            $Ser->printPort();<br>
+          </div>
+        </div>
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3>resetPort()</h3>
+          </div>
+          <div class="panel-body">
+            This funciton resetPort is used to reset the port to another name. It takes one argument. Where it is name of port .
+            </br></br>
+            <p style="color:#999">Code:</p>
+            $Ser->resetPort("/dev/ttyACM0");<br>
+            </div>
+        </div>
+
+
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3>sendBuffer()</h3>
+          </div>
+          <div class="panel-body">
+            This function is used to send information over seial port. It takes one parameter. You can send both integer and string variable to this function. It returns 0 or 1 with success or failure of sending the information.
+            </br></br>
+            <p style="color:#999">Code:</p>
+            $Ser->sendBuffer("Hello World");<br> Ser->sendBuffer(1);<br>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
